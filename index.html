@@ -6,253 +6,277 @@
 
 <head>
 
-  <meta charset="UTF-8">
+<meta charset="UTF-8">
 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>HARD ASL | Official</title>
+<title>HARD ASL — Stay Fly</title>
 
-  <style>
+<meta name="description" content="HARD ASL. Premium streetwear. Stay fly.">
 
-    * { margin: 0; padding: 0; box-sizing: border-box; }
+<style>
 
-    body {
+*{margin:0;padding:0;box-sizing:border-box}
 
-      background: #080808;
+html{scroll-behavior:smooth}
 
-      color: white;
+body{background:#080808;color:#fff;font-family:Arial,sans-serif}
 
-      font-family: Arial, sans-serif;
+a{color:inherit;text-decoration:none}
 
-    }
+header{
 
-    header {
+height:85px;padding:0 7%;display:flex;
 
-      padding: 25px 8%;
+align-items:center;justify-content:space-between;
 
-      display: flex;
+border-bottom:1px solid #252525;
 
-      justify-content: space-between;
+}
 
-      align-items: center;
+.logo{font-size:27px;font-weight:900;letter-spacing:4px}
 
-      border-bottom: 1px solid #222;
+nav{display:flex;gap:28px;font-size:11px;letter-spacing:2px}
 
-    }
+nav a{color:#aaa}
 
-    .logo {
+nav a:hover{color:white}
 
-      font-size: 25px;
+.hero{
 
-      font-weight: 900;
+min-height:85vh;padding:10% 8%;
 
-      letter-spacing: 3px;
+display:flex;flex-direction:column;
 
-    }
+justify-content:center;align-items:flex-start;
 
-    nav a {
+background:linear-gradient(90deg,#080808 15%,#080808bb 65%,#08080844),
 
-      color: #aaa;
+url('https://images.unsplash.com/photo-1523398002811-999ca8dec234?w=1800') center/cover;
 
-      text-decoration: none;
+}
 
-      margin-left: 20px;
+.tag{font-size:11px;letter-spacing:5px;color:#bbb;margin-bottom:25px}
 
-      font-size: 13px;
+.hero h1{font-size:clamp(75px,15vw,170px);line-height:.78;
 
-    }
+font-weight:900;letter-spacing:-8px}
 
-    .hero {
+.hero h1 span{color:#888}
 
-      min-height: 85vh;
+.hero p{color:#bbb;letter-spacing:3px;font-size:12px;margin:35px 0}
 
-      display: flex;
+.btn{padding:17px 30px;border:1px solid white;
 
-      flex-direction: column;
+font-size:11px;letter-spacing:3px;display:inline-block;
 
-      justify-content: center;
+transition:.3s}
 
-      padding: 10%;
+.btn:hover{background:white;color:black}
 
-      background: radial-gradient(circle at 75% 40%, #252525, #080808 60%);
+section{padding:100px 8%}
 
-    }
+.section-tag{color:#888;font-size:10px;letter-spacing:4px}
 
-    .tag {
+.section-title{font-size:clamp(35px,6vw,65px);
 
-      color: #999;
+font-weight:900;margin:15px 0 40px;letter-spacing:-2px}
 
-      letter-spacing: 5px;
+.products{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
 
-      font-size: 11px;
+.product{background:#111;overflow:hidden}
 
-      margin-bottom: 25px;
+.product img{width:100%;height:360px;object-fit:cover;
 
-    }
+display:block;filter:grayscale(100%);transition:.5s}
 
-    h1 {
+.product:hover img{filter:grayscale(0);transform:scale(1.04)}
 
-      font-size: clamp(55px, 12vw, 120px);
+.product-info{padding:20px}
 
-      font-weight: 900;
+.product-info h3{font-size:14px;letter-spacing:2px}
 
-      letter-spacing: -5px;
+.product-info p{color:#888;font-size:12px;margin-top:10px}
 
-      line-height: .9;
+.about{background:#111;text-align:center}
 
-    }
+.about h2{font-size:clamp(40px,8vw,90px);font-weight:900}
 
-    h1 span { color: #777; }
+.about p{max-width:550px;margin:25px auto;color:#aaa;line-height:2}
 
-    .description {
+.contact{text-align:center}
 
-      color: #aaa;
+.contact h2{font-size:45px;margin:20px 0}
 
-      max-width: 400px;
+footer{border-top:1px solid #252525;padding:35px 8%;
 
-      line-height: 1.8;
+display:flex;justify-content:space-between;flex-wrap:wrap;
 
-      margin: 30px 0;
+gap:20px;color:#888;font-size:10px;letter-spacing:2px}
 
-    }
+@media(max-width:700px){
 
-    .btn {
+header{padding:0 5%;height:75px}
 
-      display: inline-block;
+.logo{font-size:21px}
 
-      padding: 16px 30px;
+nav{gap:12px;font-size:9px}
 
-      border: 1px solid white;
+.hero h1{letter-spacing:-4px}
 
-      color: white;
+.products{grid-template-columns:1fr 1fr}
 
-      text-decoration: none;
+.product img{height:230px}
 
-      width: fit-content;
+section{padding:75px 6%}
 
-      font-size: 12px;
+}
 
-      letter-spacing: 2px;
+@media(max-width:420px){
 
-      transition: .3s;
+.products{grid-template-columns:1fr}
 
-    }
+.product img{height:330px}
 
-    .btn:hover {
+}
 
-      background: white;
-
-      color: black;
-
-    }
-
-    .about {
-
-      padding: 100px 10%;
-
-      border-top: 1px solid #222;
-
-    }
-
-    .about h2 {
-
-      font-size: 35px;
-
-      margin-bottom: 20px;
-
-    }
-
-    .about p {
-
-      color: #999;
-
-      line-height: 1.9;
-
-      max-width: 600px;
-
-    }
-
-    footer {
-
-      padding: 35px;
-
-      text-align: center;
-
-      color: #666;
-
-      border-top: 1px solid #222;
-
-      font-size: 11px;
-
-      letter-spacing: 2px;
-
-    }
-
-    @media(max-width:600px) {
-
-      nav a { margin-left: 10px; }
-
-      h1 { letter-spacing: -3px; }
-
-    }
-
-  </style>
+</style>
 
 </head>
 
 <body>
 
-  <header>
+<header>
 
-    <div class="logo">HARD ASL.</div>
+<div class="logo">HARD ASL.</div>
 
-    <nav>
+<nav>
 
-      <a href="#about">ABOUT</a>
+<a href="#collection">COLLECTION</a>
 
-      <a href="#contact">CONTACT</a>
+<a href="#about">ABOUT</a>
 
-    </nav>
+<a href="#contact">CONTACT</a>
 
-  </header>
+</nav>
 
-  <section class="hero">
+</header>
 
-    <div class="tag">WELCOME TO THE WORLD OF HARD ASL</div>
+<div class="hero">
 
-    <h1>HARD<br><span>ASL.</span></h1>
+<div class="tag">THE STREETWEAR EXPERIENCE</div>
 
-    <p class="description">
+<h1>HARD<br><span>ASL.</span></h1>
 
-      Different mindset. Different standards.
+<p>STAY FLY. NEVER ORDINARY.</p>
 
-      We don't follow the ordinary. We create our own identity.
+<a href="#collection" class="btn">EXPLORE THE BRAND ↗</a>
 
-    </p>
+</div>
 
-    <a href="#about" class="btn">DISCOVER MORE ↗</a>
+<section id="collection">
 
-  </section>
+<div class="section-tag">01 / OUR STYLE</div>
 
-  <section class="about" id="about">
+<div class="section-title">THE COLLECTION.</div>
 
-    <h2>MORE THAN A NAME.</h2>
+<div class="products">
 
-    <p>
+<div class="product">
 
-      HARD ASL is an identity built around individuality,
+<img src="https://images.unsplash.com/photo-1556821840-3a63f95609a7?w=700" alt="Streetwear hoodie">
 
-      confidence and standing out. This is only the beginning.
+<div class="product-info">
 
-    </p>
+<h3>THE HOODIE</h3>
 
-  </section>
+<p>COMFORT MEETS ATTITUDE</p>
 
-  <footer id="contact">
+</div>
 
-    HARD ASL © 2026 — ALL RIGHTS RESERVED
+</div>
 
-  </footer>
+<div class="product">
+
+<img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=700" alt="Streetwear t-shirt">
+
+<div class="product-info">
+
+<h3>THE ESSENTIAL TEE</h3>
+
+<p>EVERYDAY. ELEVATED.</p>
+
+</div>
+
+</div>
+
+<div class="product">
+
+<img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=700" alt="Street fashion">
+
+<div class="product-info">
+
+<h3>THE STREET EDIT</h3>
+
+<p>MAKE YOUR OWN RULES</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="about" id="about">
+
+<div class="section-tag">02 / OUR IDENTITY</div>
+
+<h2>STAY FLY.</h2>
+
+<p>
+
+HARD ASL is more than a clothing brand.
+
+It's an attitude, a mindset and a way of life.
+
+Built for those who dare to stand out.
+
+Never ordinary. Always original.
+
+</p>
+
+</section>
+
+<section class="contact" id="contact">
+
+<div class="section-tag">03 / CONNECT WITH US</div>
+
+<h2>BE PART OF THE MOVEMENT.</h2>
+
+<p style="color:#888;margin-bottom:30px">
+
+Follow HARD ASL. Stay connected.
+
+</p>
+
+<a class="btn" href="https://instagram.com/" target="_blank">
+
+FOLLOW ON INSTAGRAM ↗
+
+</a>
+
+</section>
+
+<footer>
+
+<div>HARD ASL. © 2026</div>
+
+<div>STAY FLY.</div>
+
+<div>ALL RIGHTS RESERVED.</div>
+
+</footer>
 
 </body>
 
